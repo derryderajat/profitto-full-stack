@@ -79,7 +79,7 @@ def get_json_from_api(api_url):
 
 # Example usage:
 api_url = "http://test-profitto-api.s3.ap-southeast-1.amazonaws.com/university.json"  # Replace with your API endpoint
-json_data = get_json_from_api(api_url)[:5]
+json_data = get_json_from_api(api_url)
 
 if json_data:
     print("JSON data:")
@@ -110,7 +110,7 @@ for entry in json_data:
     )
 
     insert_university_into_database(conn, university)
-    print("SUCCESS menyimpan")
+print("SUCCESS menyimpan")
 
 # Close the database connection
 conn.close()
